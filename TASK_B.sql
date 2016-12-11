@@ -31,11 +31,11 @@ CREATE VIEW TaskB AS (
 		sum_academic_hours
 	FROM
 		data
-		LEFT JOIN Professor
+		JOIN Professor
 			ON data.professor_id = Professor.id
-		LEFT JOIN Person
+		JOIN Person
 			ON Person.id = Professor.id
-		LEFT JOIN Department
+		JOIN Department
 			ON Department.id = Professor.department
 );
 
